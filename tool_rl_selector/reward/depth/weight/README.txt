@@ -1,0 +1,2 @@
+Download pre-trained weight named "dispnet_model_best.pth.tar" of SC-Models/Updated Models/resnet18_depth_256 from [here](https://github.com/JiawangBian/SC-SfMLearner-Release)
+After downloading the weight, move the file to the "weight" folder.

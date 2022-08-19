@@ -1,0 +1,27 @@
+**/*.log
+**/__pycache__/
+**/*.zip
+**/*.pth.tar
+**/*.pth
+**/tmp
+**/unused
+**/outputs
+**/output
+**/logs
+
+tool_rl_selector/backup
+tool_rl_selector/results
+tool_rl_selector/ref
+tool_rl_selector/dqn_checkpoints
+tool_rl_selector/dataset
+#tool_rl_selector/cnn_tool/*
+tool_rl_selector/dqn/ref
+
+tool_trainner/data
+tool_trainner/dataset
+.idea/
+
+# exception wild-card
+!.gitignore
+!tool_rl_selector/dataset/*.py
+!tool_rl_selector/cnn_tool/*/*.pth
