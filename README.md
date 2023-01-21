@@ -14,15 +14,9 @@ This github is a official implementation of the paper:
  >[[Paper](https://arxiv.org/abs/2207.03081)] [[Project webpage](https://sites.google.com/view/thermal-monodepth-project-page)]
 
 ## Introduction
-Recently, self-supervised learning of depth and ego-motion from thermal images shows strong robustness and reliability under challenging lighting and weather conditions.
-However, the inherent thermal image properties such as weak contrast, blurry edges, and noise hinder to generate effective self-supervision from thermal images.
-Therefore, most previous researches just rely on additional self-supervisory sources such as RGB video, generative models, and Lidar information.
-In this paper, we conduct an in-depth analysis of thermal image characteristics that degenerates self-supervision from thermal images. 
-Based on the analysis, we propose an effective thermal image mapping method that significantly increases image information, such as overall structure, contrast, and details, while preserving temporal consistency.
-By resolving the fundamental problem of the thermal image, our depth and pose network trained only with thermal images achieves state-of-the-art results without utilizing any extra self-supervisory source.
-As our best knowledge, this work is the first self-supervised learning approach to train monocular depth and relative pose networks with only thermal images.
+In this paper, we propose a multi-objective camera ISP framework that utilizes Deep Reinforcement Learning (DRL) and camera ISP toolbox that consist of network-based and conventional ISP tools. The proposed DRL-based camera ISP framework iteratively selects a proper tool from the toolbox and applies it to the image to maximize a given vision task-specific reward function. For this purpose, we implement total 51 ISP tools that include exposure correction, color-and-tone correction, white balance, sharpening, denoising, and the others. We also propose an efficient DRL network architecture that can extract the various aspects of an image and make a rigid mapping relationship between images and a large number of actions. Our proposed DRL-based ISP framework effectively improves the image quality according to each vision task such as RAW-to-RGB image restoration, 2D object detection, and monocular depth estimation.
 
-### Deep Reinforcement Learning based Camera ISP framework
+## Deep Reinforcement Learning based Camera ISP framework
 <p align="center">
  <img src="media/teaser_a.png" width="390" />
  <img src="media/teaser_b.png" width="440" />
@@ -210,11 +204,12 @@ For `CONTINUEFILE`, specify the location of the checkpoint.
 
 ## Citation
 Please cite the following paper if you use our work, parts of this code, and pre-processed dataset in your research.
-	
-	@article{shin2022drl,
+
+	@inproceedings{shin2022drl,
 	  title={DRL-ISP: Multi-Objective Camera ISP with Deep Reinforcement Learning},
 	  author={Shin, Ukcheol and Lee, Kyunghyun and Kweon, In So},
-	  journal={arXiv preprint arXiv:2207.03081},
-	  year={2022}
+	  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+	  pages={7044--7051},
+	  year={2022},
+	  organization={IEEE}
 	}
-
